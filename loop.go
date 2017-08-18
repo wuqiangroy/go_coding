@@ -16,7 +16,7 @@ func main() {
 		sum2 += sum2
 	}
 	fmt.Print("\n", sum2)
-	
+
 	//as while in C
 	sum3 := 0
 	for sum3 < 1000 {

@@ -22,7 +22,7 @@ func newton() float64 {
 	return 1
 }
 
-func sqrt(n float64) float64 {
+func sq(n float64) float64 {
 	for i := 1; i < 11; i ++ {
 		n = n - (n*n - n) / (2*n)
 	}
@@ -31,5 +31,5 @@ func sqrt(n float64) float64 {
 
 func main() {
 	fmt.Print(newton())
-	fmt.Print("\n10 times calculate is: ", sqrt(4))
+	fmt.Print("\n10 times calculate is: ", sq(4))
 }
