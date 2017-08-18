@@ -39,6 +39,7 @@ func main() {
 	}
 
 	t := time.Now()
+	//没有条件的switch相当于switcch true
 	switch {
 	case t.Hour() < 12:
 		fmt.Printf("Now is %T, It's before noon\n", t.String())
@@ -59,4 +60,17 @@ func main() {
 	whatAmI(true)
 	whatAmI(1)
 	whatAmI("this is my dream")
+
+	fmt.Print("When's Saturday?\n")
+	today := time.Now().Weekday()
+	switch time.Saturday {
+	case today:
+		fmt.Print("today")
+	case today + 1:
+		fmt.Print("tomorrow")
+	case today + 2:
+		fmt.Print("In 2 days")
+	default:
+		fmt.Print("Too far to welcome saturday")
+	}
 }
