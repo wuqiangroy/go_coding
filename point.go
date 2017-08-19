@@ -11,7 +11,7 @@ func main() {
 	fmt.Print(p, "\n")
 	*p = 21
 	fmt.Print(i, "\n")
-	
+
 	p = &j
 	*p = *p / 37
 	fmt.Print(j)
