@@ -11,6 +11,7 @@ func main() {
 	//fmt.Print("Hello, ")
 
 	fmt.Print("Counting\n")
+	//当函数返回时， 会按照后进先出的顺序调用被延迟的函数调用。
 	for i := 1; i < 10; i++ {
 		defer fmt.Print(i, "\n")
 	}
