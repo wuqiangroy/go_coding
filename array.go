@@ -47,4 +47,33 @@ func main() {
 	printSlice("a3", a3)
 	a4 := a3[2:5]
 	printSlice("a4", a4)
+
+	//slice 的零值是 nil
+	// 一个 nil 的 slice 的长度和容量是 0
+	var a5 []int
+	fmt.Print("\n", a5, len(a5), cap(a5))
+	if a5 == nil {
+		fmt.Print("\nnil")
+	}
+
+	//append用法
+	var a6 []int
+	a6 = append(a6, 1)
+	printSlice("a6", a6)
+	a6 = append(a6, 2, 3, 4)
+	printSlice("a6", a6)
+	a6 = append(a6, 100, 101, 102)
+	printSlice("a6", a6)
+
+	//for循环slice
+	pow := []int{1, 2, 4, 5, 7, 8, 9, 10}
+	for i, v := range pow {
+		fmt.Printf("\n%d, %d", i, v)
+	}
+	//可以通过赋值给 _ 来忽略序号和值
+	//pow2 := make([]int, 10)
+	pow2 := []int{22, 33, 44, 55}
+	for _, value := range pow2 {
+		fmt.Print("\n", value)
+	}
 }
