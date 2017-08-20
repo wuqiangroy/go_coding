@@ -33,4 +33,25 @@ func main() {
 		"Shenzhen": {114.07, 22.62,},
 	}
 	fmt.Print("\n", m2, "\n", m2["Shenzhen"])
+
+	//insert, delete, check
+	m2["Guangzhou"] = Vertex{113.23, 23.16,}
+	fmt.Print("\n", m2)
+	//delete
+	delete(m2, "Guangzhou")
+	fmt.Print("\n", m2)
+	//check
+	//elem := Vertex{113.23, 23.16,}
+	//fmt.Print("\n", elem)
+	elem, ok := m2["Shenzhen"]
+	fmt.Printf("\nvalue %s is exist?%s", elem, ok)
+	fmt.Print("\nvalue: ", elem, "is exist?", ok)
+
+	//simple sample
+	m3 := make(map[string]interface{})
+	m3["name"] = "wuqiang"
+	m3["age"] = 24
+	m3["job"] = "Go developer"
+	fmt.Print("\n", m3)
+	fmt.Print("\n", len(m3))
 }
