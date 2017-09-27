@@ -4,7 +4,7 @@ import "fmt"
 
 func quick_sort(array []int) {
 	if len(array) < 2 {
-		return
+		return array
 	}
 	pivot := array[0]
 	var low []int
@@ -16,8 +16,12 @@ func quick_sort(array []int) {
 			big.append(array[i])
 		}
 	}
-	middle := []int
-	middle.append(pivot)
-	new_array := quick_sort(low) + middle + quick_sort(big)
-	return new_array
+	middle := []int {pivot}
+	return quick_sort(low) + middle + quick_sort(big)
+}
+
+func main() {
+	array := []int {1, 6, 7, 3, 2, 0, 11, 3, 4, 8, 13, 12}
+	fmt.Print(quick_sort(array))
+	fmt.Print("I do not Know how to code quick sort in recursively")
 }
