@@ -5,9 +5,10 @@ import (
 	"os"
 	"strings"
 )
-//how to run this program
-//as python, go run command_line.go "first" "second"
-//return: first second 
+/*how to run this program
+as python, go run command_line.go "first" "second"
+return: first second 
+*/
 
 func main() {
 	var s, sep string
