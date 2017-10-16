@@ -11,6 +11,13 @@ func init() {
 	}
 }
 
+// anonymous function
+// var pc [256]byte = func() (pc [256]byte) {
+// 	for i := range pc {
+// 		pc[i] = pc[i/2] + byte(i&1)
+// 	}
+// }
+
 func PopCount(x uint64) int {
 	return int(pc[byte(x>>(0*8))]+
 		pc[byte(x>>(1*8))]+
