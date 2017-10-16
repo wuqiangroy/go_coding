@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-// global varibal
+// global variable
 var pwd string
 
 func init() {
@@ -20,6 +20,6 @@ func init() {
 }
 
 func main() {
-	// using global varible pwd
+	// using global varaible pwd
 	fmt.Println(pwd)
 }
