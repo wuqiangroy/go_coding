@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	// dic := make(map[string]string)
@@ -16,6 +19,17 @@ func main() {
 	b := []byte(s)
 	s2 := string(b)
 	fmt.Println(s, b, s2)
+
+	// x := 123
+	// y := fmt.Sprintf("%d", x)
+	// fmt.Println(y, strconv.Itoa(x))
+	// fmt.Println(strconv.FormatInt(int64(x), 2))
+	// fmt.Println(strconv.FormatInt(int64(x), 8))
+	// fmt.Println(strconv.FormatInt(int64(x), 10))
+	// fmt.Println(strconv.FormatInt(int64(x), 16))
+	x, err := strconv.Atoi("12n")
+	y, err := strconv.ParseInt("12n", 10, 64)
+	fmt.Println(x, y, err)
 }
 
 func comma(s string) string {
