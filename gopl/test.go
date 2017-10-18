@@ -30,6 +30,8 @@ func main() {
 	x, err := strconv.Atoi("12n")
 	y, err := strconv.ParseInt("12n", 10, 64)
 	fmt.Println(x, y, err)
+	months := []string{1:"January", 2: "Feberay"}
+	fmt.Println(months)
 }
 
 func comma(s string) string {
