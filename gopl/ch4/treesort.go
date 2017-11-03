@@ -44,4 +44,7 @@ func main() {
 	values := []int{1, 2, 3, 5, 6, 8, 4, 6}
 	Sort(values)
 	fmt.Println(values)
+	var trees tree
+	trees.value = 123
+	fmt.Println(trees)
 }
