@@ -13,6 +13,7 @@ type Cycle struct {
 	radius int 
 }
 
+// Cycle means a anonymous func
 type Wheel struct {
 	Cycle
 	spokes int
@@ -40,4 +41,9 @@ func main() {
 		spokes: 44,
 	}
 	fmt.Println(w)
+	// %#v means that print value liked golang
+	fmt.Printf("%#v\n", w)	//main.Wheel{Cycle:main.Cycle{Point:main.Point{x:5, y:8}, radius:22}, spokes:44}	
+	w.x = 4
+	fmt.Println(w)
+	fmt.Printf("%#v\n", w)
 }
