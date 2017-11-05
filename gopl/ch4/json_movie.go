@@ -8,7 +8,7 @@ import (
 
 type Movie struct {
 	Title string
-	Year int
+	Year int 
 	Color bool
 	Actors []string
 }
@@ -34,4 +34,11 @@ func main() {
 		log.Fatalf("JSON marshaling failed: %s", err)
 	}
 	fmt.Printf("%s\n", data2)
+
+	// json uncode
+	var titles []struct { Title string}
+	if err := json.Unmarshal(data2, &titles); err != nil {
+		log.Fatalf("JSON unmarshaling failed: %s", err)
+	}
+	fmt.Println(titles)
 }
